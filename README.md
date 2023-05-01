@@ -30,7 +30,7 @@ We will set up a [cron job](https://www.hostinger.com/tutorials/cron-job) that w
 
 ![Screenshot 2023-05-01 at 3 12 55 PM](https://user-images.githubusercontent.com/101942585/235439586-12c0ec02-1e79-4dca-b8b9-84d8e17fc631.png)
 
-- The schedule expression used here indicates running the job on the 21st of each month at 14:30 hours. Use [this](https://crontab.guru) to understand and create your own schedule expressions
+- The schedule expression used here indicates running the job on the **21st of each month at 14:30 hours**. Use [this](https://crontab.guru) to understand and create your own schedule expressions
 - The second part indicates running the `.sh` file using `sh` followed by the absolute file path of `.sh` file
 
 **Note: Running on mac will require you to give cron disk access.**
