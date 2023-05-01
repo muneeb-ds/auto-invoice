@@ -19,6 +19,7 @@ pip install -r requirements.txt
 
 ![Screenshot 2023-05-01 at 2 52 25 PM](https://user-images.githubusercontent.com/101942585/235437840-9c648b30-46b3-4e4f-8a35-8c4a37cd771c.png)
 
+- Add an argument `--receiver` after `main.py` with the email of finance dept (or your own for debugging purposes)
 
 ### Automate task to run monthly
 
