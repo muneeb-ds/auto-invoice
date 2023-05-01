@@ -1,11 +1,17 @@
+from argparse import ArgumentParser
+
 from invoice import UpdateInvoice
 from email_inv import EmailUpdate
 
 def main():
-    finance_email = 'syedmuneeb54@gmail.com'
+    parser = ArgumentParser()
+    parser.add_argument("--receiver",
+                        help="email address that will receive the email",
+                        required=True)
+    args = parser.parse_args()
 
     UpdateInvoice().update_sheet()
-    EmailUpdate(finance_email).send()
+    EmailUpdate(args.receiver).send()
 
 if __name__ == "__main__":
     main()

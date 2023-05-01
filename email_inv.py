@@ -1,11 +1,12 @@
 from datetime import datetime
 import smtplib
+from decouple import config
 import os
 
 from email.message import EmailMessage
 
-EMAIL_ADDRESS = os.environ.get('EMAIL')
-PASSWORD = os.environ.get('PASS')
+EMAIL_ADDRESS = config('EMAIL')
+PASSWORD = config('PASS')
 
 class EmailUpdate:
 
@@ -25,7 +26,6 @@ class EmailUpdate:
         msg.set_content(f"PSA for {month}'s invoice\n\nRegards.")
         with open(f'invoices/invoice_{month}_{year}.xlsx', "rb") as f:
             attachment = f.read()
-            file_name = f.name
 
         msg.add_attachment(attachment, maintype="application", subtype='xlsx', filename=f"invoice_{month}_{year}.xlsx")
         
